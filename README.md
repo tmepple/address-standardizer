@@ -22,10 +22,16 @@ correctness or delivery point solutions.
 * unicode/\*  (from icu packages)
 * PostgreSQL server development for 9.2, 9.3, 9.4, 9.5, and/or 9.6
 
-### For Ubuntu/Debian
+### Ubuntu 16.04/Debian
 
 ```
 sudo apt-get install libicu-dev libicu52 libboost1.55-dev libboost-serialization1.55-dev libboost-serialization1.55.0 libboost-regex1.55-dev libboost-regex1.55.0
+```
+
+### Ubuntu 18.04
+
+```
+sudo apt install libicu-dev libicu60 libboost1.65-dev libboost-serialization1.65-dev libboost-serialization1.65.1 libboost-regex1.65-dev libboost-regex1.65.1
 ```
 
 ## Build
