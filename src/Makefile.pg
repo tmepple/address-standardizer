@@ -7,7 +7,7 @@ else
 endif
 $(info 'PG_CONFIG=$(PG_CONFIG)' )
 PG_VERSION = $(shell $(PG_CONFIG) --version)
-PG_MAJOR = $(shell $(PG_CONFIG) --version | sed -e "s/^PostgreSQL \|[.][0-9]\+$$//gi")
+PG_MAJOR = $(shell $(PG_CONFIG) --version | sed -e "s/^PostgreSQL \|[.][0-9]\+$$//gi" | cut -d " " -f1)
 PGSQL_VERSION = $(shell echo $(PG_MAJOR) | sed -e 's/[.]//' )
 
 $(info 'PG_VERSION=$(PG_VERSION)')
@@ -58,6 +58,3 @@ address_standardizer2-sample-data.sql: ../data/sample/*.lex ../data/sample/*.gmr
 
 help:
 	@echo 'make [PGVER=9.2|9.3|9.4|9.5]|[PG_CONFIG=/path/to/pg_config] clean|install'
-
-
-
